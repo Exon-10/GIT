@@ -1,0 +1,195 @@
+
+*{
+    border:0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.abrir{
+    display: none;
+}
+main{
+    color: rgb(0, 68, 80); 
+   
+}
+body{
+    background-color: rgb(140, 0, 255);
+}
+li{
+    list-style: none;
+}
+
+.cuadro{
+    background-color: rgb(240, 240, 240);
+    width: 50vw;
+    height: 33.33%;
+    margin:auto;
+    font-size: 10vh;
+    font-family: 'Trebuchet MS';
+    color: rgb(79, 79, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border-top: solid 0.1vmax rgb(172, 172, 172);
+}
+.cuadro1{
+    border: none;
+    display: flex;
+    flex-direction: column;
+
+}
+.cont_cubos{
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    position: absolute;
+    z-index: -10;
+  
+}
+@media screen and (max-width:700px) {
+    .cont_cubos{
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0vh;
+        position: absolute;
+        z-index: -10;    
+    }
+    .abrir{
+        display: block;
+        position: fixed;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .text-menu{
+        margin: 0.8rem 2.2rem;
+        font-size: 1.2rem;      
+    }
+    .contenedor{
+        width: 80vw;
+        height: 100vh; 
+        transform: translateX(-91vw);
+        background-color:  rgb(133, 133, 133); 
+        transition: 0.5s ease-out 0s;
+        position: fixed;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        opacity: 0;
+    }
+    .contenedor:target{   
+        transform: translateX(0vw);
+        transition: 0.5s ease-out 0s;
+        opacity: 1;
+    }
+
+    .ul_nav{
+        margin-top: 10vh;
+        width: 100%;
+        height: 40vh;
+        background-color: rgba(226, 226, 226, 0);
+        display: flex;
+        flex-direction: column;
+         
+    }
+    .li{
+        height: 100vh;
+        
+    }
+    .a{
+        width: 80vw;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255); 
+        padding-left: 5vw;  
+        border-bottom: solid 0.01vmax rgb(245, 245, 245);  
+    }
+
+    .li:nth-child(1){
+        border: none;
+    }
+   
+    .ul_nav li ul{
+        display: none;
+        position: absolute;
+    }
+   
+   .ul_nav li input:checked >  ul{
+        display: block;
+   }
+
+    .menu-icon{
+        margin-right: 1rem;
+    }
+  
+   .cuadro{
+       width: 100vw;
+   }
+   
+
+}
+    @media screen and (min-width:700px) {
+
+        .contenedor{
+            width: 100vw;
+            height: 10vh; 
+            position: fixed;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            opacity: 1;
+        }
+        .header{
+            display: none;
+        }
+
+        .ul_nav{
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .li{
+            width: 20vw;
+            height: 100%;
+        }
+        a:hover{
+            background-color: rgb(0, 75, 109);
+        }
+        .a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(216, 250, 255); 
+            background-color: rgb(0, 41, 60);
+            border-right: solid 0.01vmax rgba(255, 255, 255, 0.227);
+        }
+        .menu-icon{
+            margin-right: 1rem;
+        }
+        .ul_nav li ul{
+            display: none;
+            position: absolute;
+        }
+       
+       .ul_nav li:hover >  ul{
+            display: block;
+       }
+       .sub_menu{
+           height: 10vh;
+       }
+       .sub_menu li a{
+           border-top: solid 0.01vmax rgba(255, 255, 255, 0.268);
+           text-align: right;
+       }
+    }
+    
+      
+    
